@@ -6,8 +6,7 @@ use config::InstallConfig;
 
 fn main() {
     let target = std::env::args()
-        .skip(1)
-        .next()
+        .nth(1)
         .expect("File name to parse");
 
     let mut config_file = String::new();
